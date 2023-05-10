@@ -1,0 +1,64 @@
+@import '../../../../theme/scss/mixins';
+
+.info_container {
+  @include popupContainer;
+  background: rgba(0, 0, 0, 0.2);
+  cursor: initial;
+}
+
+.create_container {
+  @include popupWrapper;
+  width: 490px;
+  min-height: 300px;
+}
+
+.info_caption {
+  @include popupCaption;
+  margin-bottom: 55px;
+}
+
+.close_btn {
+  cursor: pointer;
+}
+
+.status_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1 !important;
+}
+
+.success_wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--success-color);
+  opacity: 1 !important;
+}
+
+.status_message {
+  margin-top: 20px;
+  font-family: Poppins_Medium_500, sans-serif;
+  font-size: 20px;
+  color: var(--black600-color);
+  opacity: 1 !important;
+}
+
+.confirm_time {
+  color: var(--black900-color);
+}
+
+.confirm_warning {
+  margin-top: 20px;
+  font-size: var(--main-fsize);
+  color: var(--error-color);
+}
+
+.btn_confirm {
+  display: flex;
+  justify-content: flex-end;
+}
+

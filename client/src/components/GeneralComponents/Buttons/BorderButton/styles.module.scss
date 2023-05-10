@@ -1,0 +1,23 @@
+@import '../../../../theme/scss/mixins';
+
+.border_btn {
+  @include cancelBtn;
+  display: initial;
+}
+
+.border_btn_notActive {
+  @extend .border_btn;
+  border: 2px solid var(--black300-color);
+  color: var(--black300-color);
+}
+
+.border_btn:hover {
+  border: 2px solid var(--primary800-color);
+  color: var(--primary800-color);
+}
+
+.border_btn_notActive:hover {
+  border: 2px solid var(--black300-color);
+  color: var(--black300-color);
+  cursor: initial;
+}

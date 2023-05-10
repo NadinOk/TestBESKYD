@@ -1,0 +1,22 @@
+@import '../../../../theme/scss/mixins';
+
+.submit_btn {
+  @include submitBtn;
+  display: initial;
+  width: auto;
+}
+
+.submit_btn:hover {
+  background: var(--primary800-color);
+}
+
+.submit_btn_notActive {
+  @extend .submit_btn;
+  display: initial;
+  background: var(--black300-color);
+  cursor: inherit;
+}
+
+.submit_btn_notActive:hover {
+  background: var(--black300-color);
+}

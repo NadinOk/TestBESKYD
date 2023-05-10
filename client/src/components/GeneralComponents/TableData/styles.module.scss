@@ -1,0 +1,32 @@
+.pendingRow {
+  color: orange;
+}
+
+.nav_newUser_btn {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  margin: 10px;
+  padding: 7px 16px;
+  border: none;
+  outline: none;
+  border-radius: 33px;
+  color: var(--white-color);
+  background: var(--primary900-color);
+  cursor: pointer;
+
+  & > img {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    filter: brightness(100);
+  }
+
+  & > span {
+    font-size: var(--main-fsize);
+    line-height: 22px;
+  }
+}
+

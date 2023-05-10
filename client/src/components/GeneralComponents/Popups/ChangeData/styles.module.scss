@@ -1,0 +1,55 @@
+@import '../../../../theme/scss/mixins';
+
+.info_container {
+  @include popupContainer;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.popup_container {
+  @include popupWrapper;
+}
+
+.info_caption {
+  @include popupCaption;
+}
+
+.close_btn {
+  cursor: pointer;
+}
+
+.info_content {
+}
+
+.form_item {
+  @include formItem;
+  width: 100%;
+}
+
+.lang_item {
+  width: 100%;
+
+  & > div {
+    width: 100%;
+  }
+}
+
+.btn_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+
+  & .btn:last-child {
+    margin-right: 0;
+  }
+}
+
+.btn {
+  width: calc(50% - 5px);
+  margin: 0;
+}
+
+.loader {
+  margin: 24px auto;
+}
+

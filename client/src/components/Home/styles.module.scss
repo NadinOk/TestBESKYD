@@ -1,0 +1,50 @@
+.header {
+    height: var(--desktop-height);
+    padding: 2px 40px;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.25);
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.logo_wrap {
+    display: inline-block;
+
+    & .logo {
+        display: inline-block;
+    }
+}
+
+.lang_btn {
+    font-family: Poppins_Regular, sans-serif;
+    font-size: 16px;
+    background: none;
+    color: #333333;
+    border: none;
+    outline: none;
+}
+
+.login_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98px;
+    height: 40px;
+    margin-left: 20px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-family: Poppins_Regular, sans-serif;
+    font-size: 16px;
+    color: #ffffff;
+    background: var(--primary800-color);
+    cursor: pointer;
+}
+.icon {
+    margin-right: 30px;
+
+}

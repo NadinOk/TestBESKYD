@@ -1,0 +1,289 @@
+@mixin caption {
+    font-family: Poppins_Bold, sans-serif;
+    font-size: var(--caption-fsize);
+    text-align: center;
+    line-height: 54px;
+}
+
+@mixin formItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+@mixin authBtn {
+    display: inline-block;
+    text-align: center;
+    font-family: Poppins_SemiBold, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    border: none;
+    outline: none;
+    background: none;
+    color: var(--blue600-color);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@mixin cancelBtn {
+    display: block;
+    text-align: center;
+    font-family: Poppins_Regular, sans-serif;
+    //width: 165px;
+    height: 40px;
+    padding: 10px 20px;
+    font-size: var(--main-fsize);
+    line-height: 16px;
+    border: 2px solid var(--primary900-color);
+    outline: none;
+    border-radius: 50px;
+    color: var(--primary900-color);
+    background: none;
+    cursor: pointer;
+}
+
+@mixin submitBtn {
+    display: block;
+    text-align: center;
+    font-family: Poppins_Regular, sans-serif;
+    width: 100%;
+    height: 40px;
+    padding: 10px 20px;
+    margin: 24px 0;
+    font-size: var(--main-fsize);
+    line-height: 17px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: var(--white-color);
+    background: var(--primary900-color);
+    cursor: pointer;
+}
+
+@mixin errorField {
+    position: absolute;
+    left: 10px;
+    bottom: -18px;
+    height: 14px;
+    font-size: var(--small-fsize);
+    line-height: 14px;
+    white-space: nowrap;
+    color: var(--error-color);
+}
+
+@mixin errorIcon {
+    position: absolute;
+    right: 18px;
+    top: 41px;
+}
+
+@mixin errorMessage($maxWidth: 440px) {
+    display: flex;
+    align-items: center;
+    max-width: $maxWidth;
+    height: fit-content;
+    padding: 16px 37px;
+    margin-bottom: 32px;
+    border-radius: var(--profile-border-radius);
+    background: var(--primary100-color);
+
+    & span:first-child {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 18px;
+        background: url('../assets/icons/error.svg') no-repeat;
+        background-size: cover;
+    }
+
+    & span:last-child {
+        display: inline-block;
+        width: calc(100% - 43px);
+        font-family: Poppins_Medium_500, sans-serif;
+        font-size: var(--title-fsize);
+        line-height: 24px;
+        color: var(--main-text-color);
+    }
+}
+
+@mixin successMessage($maxWidth: 440px) {
+    display: flex;
+    align-items: center;
+    max-width: $maxWidth;
+    height: fit-content;
+    padding: 16px 37px;
+    margin-bottom: 32px;
+    border-radius: var(--profile-border-radius);
+    background: #D6E8CF;
+
+    & span:first-child {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-right: 18px;
+        background: url('../assets/icons/success_rounded.svg') no-repeat;
+        background-size: cover;
+    }
+
+    & span:last-child {
+        display: inline-block;
+        width: calc(100% - 43px);
+        font-family: Poppins_Medium_500, sans-serif;
+        font-size: var(--title-fsize);
+        line-height: 24px;
+        color: var(--main-text-color);
+    }
+}
+
+@mixin tabItem {
+    padding: 8px 0;
+    margin-right: 32px;
+    font-family: Poppins_Regular, sans-serif;
+    font-size: var(--title-fsize);
+    border: none;
+    background: none;
+    outline: none;
+    color: var(--main-text-color);
+    cursor: pointer;
+}
+
+@mixin tabItemActive {
+    color: var(--primary800-color);
+    border-bottom: 2px solid var(--primary800-color);
+}
+
+@mixin sidenavItem {
+    padding: 12px 12px 12px 64px;
+    font-family: Poppins_Regular, sans-serif;
+    font-size: var(--title-fsize);
+    border: none;
+    text-align: left;
+    background: none;
+    outline: none;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+}
+
+@mixin sidenavItemActive {
+    padding: 12px 12px 12px 61px;
+    color: var(--main-text-color);
+    border-left: 3px solid var(--primary800-color);
+    background: var(--primary100-color);
+}
+
+@mixin profileTitle {
+    padding: 14px 24px;
+    //border-bottom: 1px solid #f0f0f0;
+    font-family: 'Poppins_Regular', sans-serif;
+    font-size: var(--title-fsize);
+    line-height: 24px;
+}
+
+@mixin mainCaption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    padding: 10px 20px;
+    margin-bottom: 24px;
+    font-size: var(--title-fsize);
+    border-radius: 30px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.06);
+    background: var(--white-color);
+}
+
+@mixin dropdownArrow {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 7px;
+    transition: all .3s ease;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 3px;
+        width: 9px;
+        height: 1.5px;
+        border-radius: 1px;
+        background: var(--black600-color);
+    }
+
+    &::before {
+        left: -1.2px;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        right: -1.2px;
+        transform: rotate(-45deg);
+    }
+}
+
+@mixin closeBtn {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 5px;
+        width: 17px;
+        height: 1.5px;
+        border-radius: 1px;
+        background: var(--black500-color);
+    }
+
+    &::before {
+        left: -2.5px;
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        right: -2.5px;
+        transform: rotate(-45deg);
+    }
+}
+
+@mixin cardWrapper {
+    padding: 10px;
+    border: 1px solid var(--black200-color);
+    border-radius: 10px;
+}
+
+// Popups mixins
+
+@mixin popupContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    width: 100%;
+    min-height: 100%;
+}
+
+@mixin popupWrapper {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 20;
+    transform: translate(-50%, 0);
+    width: 34%;
+    min-width: 450px;
+    padding: 24px;
+    border-radius: var(--profile-border-radius);
+    background: var(--white-color);
+}
+
+@mixin popupCaption {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    font-family: 'Poppins_Medium_500', sans-serif;
+    font-size: var(--popup-title-fsize);
+    line-height: 24px;
+}
